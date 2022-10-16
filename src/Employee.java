@@ -1,11 +1,11 @@
 
 public class Employee {
 	private String name;
-	private int salary ;
-	private int  workHours ;
+	private float salary ;
+	private float  workHours ;
 	private int hireYear;
 	
-	public Employee (String name,int salary,int workHours, int hireYear){
+	public Employee (String name,float salary,int workHours, int hireYear){
 		this.name=name;
 		this.salary=salary;
 		this.workHours=workHours;
@@ -16,16 +16,19 @@ public class Employee {
 	
 	public void tax(){
 		if(salary>1000){
-			this.salary=(salary*97)/100;
+			double tax= 0.03;
+			System.out.println("Tax: "+ tax);
 		}
 		else if (salary<1000){
-		 this.salary=salary;	
+		 int tax=0;
+		 System.out.println("Tax: "+tax);
 		}
 	}
 	
 	public void bonus(){
 		if(workHours>40){
-			salary=(workHours-40)*30+salary;
+			float bonus= (workHours-40)*30;
+			System.out.println("Bonus: "+ bonus);
 		}
 	}
 	public void raiseSalary(){
@@ -102,7 +105,7 @@ public class Employee {
 				}
 				else{
 					salary=(salary*115)/100;
-					System.out.println(salary);
+					System.out.println("Maaþ: "+salary);
 				}
 			}
 			
@@ -117,7 +120,7 @@ public class Employee {
 		System.out.println("Ýsim: "+this.name);
 		System.out.println("Çalýþma Saati: "+this.workHours);
 		System.out.println("Ýþe baþladýðý yýl: "+this.hireYear);
-		System.out.println("Maaþ: ") ;
+	
 	
 		
 	}
