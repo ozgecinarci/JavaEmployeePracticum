@@ -69,7 +69,7 @@ public class Employee {
 			if(salary>1000){
 				if(workHours>40){
 				salary=(((salary*97)/100)*110)/100 + (workHours-40)*30;
-				System.out.println("Maaþ: "+salary);
+				System.out.println("Maaþ+Bonus: "+salary);
 				}
 				else{
 					salary=(((salary*97)/100)*110)/100;
@@ -79,7 +79,7 @@ public class Employee {
 			if(salary<1000){
 				if (workHours>40){ 
 					salary=(salary*110)/100 + (workHours-40)*30;
-					System.out.println("Maaþ: "+salary);
+					System.out.println("Maaþ+Bonus: "+salary);
 				}
 				else{
 					salary=(salary*110)/100;
@@ -93,7 +93,7 @@ public class Employee {
 			if(salary>1000){
 				if(workHours>40){
 				salary=(((salary*97)/100)*115)/100 + (workHours-40)*30;
-				System.out.println("Maaþ: "+salary);
+				System.out.println("Maaþ+Bonus: "+salary);
 				}
 				else{
 					salary=(((salary*97)/100)*115)/100;
@@ -103,7 +103,7 @@ public class Employee {
 			if(salary<1000){
 				if (workHours>40){
 					salary=(salary*115)/100 + (workHours-40)*30;
-					System.out.println("Maaþ: "+salary);
+					System.out.println("Maaþ+Bonus: "+salary);
 				}
 				else{
 					salary=(salary*115)/100;
