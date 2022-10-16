@@ -12,7 +12,13 @@ public class Employee {
 		this.hireYear=hireYear;
 	}
 	
+	public void showInformations(){
+		System.out.println("Bilgiler...");
+		System.out.println("Ýsim: "+this.name);
+		System.out.println("Çalýþma Saati: "+this.workHours);
+		System.out.println("Ýþe baþladýðý yýl: "+this.hireYear);
 	
+	}
 	
 	public void tax(){
 		if(salary>1000){
@@ -37,21 +43,21 @@ public class Employee {
 			if(salary>1000){
 				if(workHours>40){
 				salary=(((salary*97)/100)*105)/100 + (workHours-40)*30;
-				System.out.println(salary);
+				System.out.println("Maaþ+Bonus: "+salary);
 				}
 				else{
 					salary=(((salary*97)/100)*105)/100;
-					System.out.println(salary);
+					System.out.println("Maaþ: "+salary);
 				}
 			}
 			if(salary<1000){
 				if (workHours>40){
 					salary=(salary*105)/100 + (workHours-40)*30;
-					System.out.println(salary);
+					System.out.println("Maaþ+Bonus: "+salary);
 				}
 				else{
 					salary=(salary*105)/100;
-					System.out.println(salary);
+					System.out.println("Maaþ: "+salary);
 				}
 			}
 		}
@@ -63,45 +69,41 @@ public class Employee {
 			if(salary>1000){
 				if(workHours>40){
 				salary=(((salary*97)/100)*110)/100 + (workHours-40)*30;
-				System.out.println(salary);
+				System.out.println("Maaþ: "+salary);
 				}
 				else{
 					salary=(((salary*97)/100)*110)/100;
-					System.out.println(salary);
+					System.out.println("Maaþ: "+salary);
 				}
 			}
 			if(salary<1000){
 				if (workHours>40){ 
 					salary=(salary*110)/100 + (workHours-40)*30;
-					System.out.println(salary);
+					System.out.println("Maaþ: "+salary);
 				}
 				else{
 					salary=(salary*110)/100;
-					System.out.println(salary);
+					System.out.println("Maaþ: "+salary);
 				}
 			}
 			
-			
-			
-			
-			
-			
+				
 		}
 		else if((nowYear-hireYear)>19){
 			if(salary>1000){
 				if(workHours>40){
 				salary=(((salary*97)/100)*115)/100 + (workHours-40)*30;
-				System.out.println(salary);
+				System.out.println("Maaþ: "+salary);
 				}
 				else{
 					salary=(((salary*97)/100)*115)/100;
-					System.out.println(salary);
+					System.out.println("Maaþ:" +salary);
 				}
 			}
 			if(salary<1000){
 				if (workHours>40){
 					salary=(salary*115)/100 + (workHours-40)*30;
-					System.out.println(salary);
+					System.out.println("Maaþ: "+salary);
 				}
 				else{
 					salary=(salary*115)/100;
@@ -113,20 +115,4 @@ public class Employee {
 		
 	}
 	
-
-	
-	public void showInformations(){
-		System.out.println("Bilgiler...");
-		System.out.println("Ýsim: "+this.name);
-		System.out.println("Çalýþma Saati: "+this.workHours);
-		System.out.println("Ýþe baþladýðý yýl: "+this.hireYear);
-	
-	
-		
-	}
-	
-	
-	
-	
-
 }
