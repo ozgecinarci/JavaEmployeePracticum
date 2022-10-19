@@ -50,36 +50,58 @@ public class Employee {
 		if(nowYear-hireYear<10){
 			if(salary>1000){
 				if(workHours>40){
-				double zambonusvergi=((((salary*105)/100)+((workHours-40)*30*4))*97)/100;
+				double zambonusvergi=(((salary-salary*0.03)+((workHours-40)*30))+salary*0.05);
 				System.out.println("Ýsim: "+isim);
 				System.out.println("Zamsýz maaþ:"+salary);
-				System.out.println("%5 Zamlý maaþ:"+ salary*105/100 );
-				System.out.println("%5 Zamlý+Bonuslu maaþ: "+(((salary*105)/100)+((workHours-40)*30*4)));
-				System.out.println("%5 Zamlý+Bonuslu maaþ üzerine %3 vergi uygulanmýþ maaþ: "+ zambonusvergi);
-				}
+				System.out.println("Çalýþma saati: "+workHours);
+				System.out.println("Ýþe baþlangýç yýlý: "+hireYear);
+				System.out.println("Vergi: "+ salary*0.03);
+				System.out.println("Bonus: "+ ((workHours-40)*30));
+				System.out.println("Maaþ artýþý: "+ salary*0.05);
+				System.out.println("Vergi ve bonuslar ile birlikte maaþ: "+ (salary-salary*0.03+((workHours-40)*30)));
+				System.out.println("Toplam maaþ: "+zambonusvergi);
+			}
 				else{
-					float zambonusvergi=(((salary*105)/100)*97)/100;
+					double zambonusvergi=((salary-salary*0.03)+ (salary*105)/100);
 					System.out.println("Ýsim: "+isim);
-					System.out.println("Zamsýz maaþ: "+salary);
-					System.out.println("%5 Zamlý maaþ: "+ ((salary*105)/100) );
-					System.out.println("%5 Zam üzerine %3 vergi uygulanmýþ maaþ: "+zambonusvergi);
+					System.out.println("Zamsýz maaþ:"+salary);
+					System.out.println("Çalýþma saati: "+workHours);
+					System.out.println("Ýþe baþlangýç yýlý: "+hireYear);
+					System.out.println("Vergi: "+ salary*0.03);
+					System.out.println("Bonus:"+0.0);
+					System.out.println("Maaþ artýþý: "+ salary*0.05);
+					System.out.println("Vergi ve bonuslar ile birlikte maaþ: "+ (salary-salary*0.03));
+					System.out.println("Toplam maaþ: "+zambonusvergi);
+					
 				}
 			}
 			if(salary<1000){
 				if (workHours>40){
-					
-					float zambonusvergi=(salary*105)/100 + (workHours-40)*30*4;
+					double zambonusvergi=((salary + salary*0.05)+ (workHours-40)*30);
 					System.out.println("Ýsim: "+isim);
-					System.out.println("Zamsýz maaþ: "+salary);
-					System.out.println("%5 Zamlý maaþ: "+salary*105/100);
-					System.out.println("%5 Zamlý+bonuslu maaþ"+ zambonusvergi);
+					System.out.println("Zamsýz maaþ:"+salary);
+					System.out.println("Çalýþma saati: "+workHours);
+					System.out.println("Ýþe baþlangýç yýlý: "+hireYear);
+					System.out.println("Vergi: "+ 0.0);
+					System.out.println("Bonus: "+ ((workHours-40)*30));
+					System.out.println("Maaþ artýþý: "+ salary*0.05);
+					System.out.println("Vergi ve bonuslar ile birlikte maaþ: "+ (salary +((workHours-40)*30)));
+					System.out.println("Toplam maaþ: "+zambonusvergi);
+	
 					
 				}
 				else{
-					float zambonusvergi=(salary*105)/100;
+					double zambonusvergi=((salary + salary*0.05));
 					System.out.println("Ýsim: "+isim);
-					System.out.println("Zamsýz maaþ:" +salary);
-					System.out.println("%5 Zamlý maaþ:" +zambonusvergi);
+					System.out.println("Zamsýz maaþ:"+salary);
+					System.out.println("Çalýþma saati: "+workHours);
+					System.out.println("Ýþe baþlangýç yýlý: "+hireYear);
+					System.out.println("Vergi: "+ 0.0);
+					System.out.println("Bonus: "+ 0.0);
+					System.out.println("Maaþ artýþý: "+ salary*0.05);
+					System.out.println("Vergi ve bonuslar ile birlikte maaþ: "+ salary);
+					System.out.println("Toplam maaþ: "+zambonusvergi);
+	
 				}
 			}
 		}
@@ -90,36 +112,56 @@ public class Employee {
 		else if((nowYear-hireYear)>9 && (nowYear-hireYear)<20 ){
 			if(salary>1000){
 				if(workHours>40){
-				float zambonusvergi=(((salary*110)/100)+((workHours-40)*30*4)) *97/100 ;
-				System.out.println("Ýsim: "+isim);
-				System.out.println("Zamsýz maaþ:"+salary);
-				System.out.println("%10 Zamlý maaþ:"+ salary*105/100 );
-				System.out.println("%10 Zamlý+Bonuslu maaþ: "+(salary*110/100)+ ((workHours-40)*30*4)) ;
-				System.out.println("%10 Zamlý+Bonuslu maaþ üzerine %3 vergi uygulanmýþ maaþ: "+ zambonusvergi);
-				
+					double zambonusvergi=(((salary-salary*0.03)+((workHours-40)*30))+salary*0.10);
+					System.out.println("Ýsim: "+isim);
+					System.out.println("Zamsýz maaþ:"+salary);
+					System.out.println("Çalýþma saati: "+workHours);
+					System.out.println("Ýþe baþlangýç yýlý: "+hireYear);
+					System.out.println("Vergi: "+ salary*0.03);
+					System.out.println("Bonus: "+ ((workHours-40)*30));
+					System.out.println("Maaþ artýþý: "+ salary*0.10);
+					System.out.println("Vergi ve bonuslar ile birlikte maaþ: "+ (salary-salary*0.03+((workHours-40)*30)));
+					System.out.println("Toplam maaþ: "+zambonusvergi);
 				}
 				else{
-					float zambonusvergi=(((salary*110)/100)*97)/100;
+					double zambonusvergi=((salary-salary*0.03)+ (salary*0.10));
 					System.out.println("Ýsim: "+isim);
-					System.out.println("Zamsýz maaþ: "+salary);
-					System.out.println("%10 Zamlý maaþ: "+ ((salary*110)/100) );
-					System.out.println("%10 Zam üzerine %3 vergi uygulanmýþ maaþ: "+zambonusvergi);
+					System.out.println("Zamsýz maaþ:"+salary);
+					System.out.println("Çalýþma saati: "+workHours);
+					System.out.println("Ýþe baþlangýç yýlý: "+hireYear);
+					System.out.println("Vergi: "+ salary*0.03);
+					System.out.println("Bonus:"+0.0);
+					System.out.println("Maaþ artýþý: "+ salary*0.10);
+					System.out.println("Vergi ve bonuslar ile birlikte maaþ: "+ (salary-salary*0.03));
+					System.out.println("Toplam maaþ: "+zambonusvergi);
 				}
 			}
 			if(salary<1000){
 				if (workHours>40){ 
-					float zambonusvergi=(salary*110)/100 + (workHours-40)*30*4;
+					double zambonusvergi=((salary + salary*0.10)+ (workHours-40)*30);
 					System.out.println("Ýsim: "+isim);
-					System.out.println("Zamsýz maaþ: "+salary);
-					System.out.println("%10 Zamlý maaþ: "+salary*110/100);
-					System.out.println("%10 Zamlý+bonuslu maaþ"+ zambonusvergi);
+					System.out.println("Zamsýz maaþ:"+salary);
+					System.out.println("Çalýþma saati: "+workHours);
+					System.out.println("Ýþe baþlangýç yýlý: "+hireYear);
+					System.out.println("Vergi: "+ 0.0);
+					System.out.println("Bonus: "+ ((workHours-40)*30));
+					System.out.println("Maaþ artýþý: "+ salary*0.10);
+					System.out.println("Vergi ve bonuslar ile birlikte maaþ: "+ (salary+((workHours-40)*30)));
+					System.out.println("Toplam maaþ: "+zambonusvergi);
+	
 					
 				}
 				else{
-					float zambonusvergi=(salary*110)/100;
+					double zambonusvergi=((salary + salary*0.10));
 					System.out.println("Ýsim: "+isim);
-					System.out.println("Zamsýz maaþ:" +salary);
-					System.out.println("%10 Zamlý maaþ:" +zambonusvergi);
+					System.out.println("Zamsýz maaþ:"+salary);
+					System.out.println("Çalýþma saati: "+workHours);
+					System.out.println("Ýþe baþlangýç yýlý: "+hireYear);
+					System.out.println("Vergi: "+ 0.0);
+					System.out.println("Bonus: "+ 0.0);
+					System.out.println("Maaþ artýþý: "+ salary*0.10);
+					System.out.println("Vergi ve bonuslar ile birlikte maaþ: "+ salary);
+					System.out.println("Toplam maaþ: "+zambonusvergi);
 				}
 			}
 			
@@ -128,34 +170,54 @@ public class Employee {
 		else if((nowYear-hireYear)>19){
 			if(salary>1000){
 				if(workHours>40){
-					float zambonusvergi=(((salary*115)/100)+((workHours-40)*30*4)) *97/100 ;
+					double zambonusvergi=(((salary-salary*0.03)+((workHours-40)*30))+salary*0.15);
 					System.out.println("Ýsim: "+isim);
 					System.out.println("Zamsýz maaþ:"+salary);
-					System.out.println("%15 Zamlý maaþ:"+ salary*115/100 );
-					System.out.println("%15 Zamlý+Bonuslu maaþ: "+(salary*115/100)+ ((workHours-40)*30*4)) ;
-					System.out.println("%15 Zamlý+Bonuslu maaþ üzerine %3 vergi uygulanmýþ maaþ: "+ zambonusvergi);
+					System.out.println("Çalýþma saati: "+workHours);
+					System.out.println("Ýþe baþlangýç yýlý: "+hireYear);
+					System.out.println("Vergi: "+ salary*0.03);
+					System.out.println("Bonus: "+ ((workHours-40)*30));
+					System.out.println("Maaþ artýþý: "+ salary*0.15);
+					System.out.println("Vergi ve bonuslar ile birlikte maaþ: "+ (salary-salary*0.03+((workHours-40)*30)));
+					System.out.println("Toplam maaþ: "+zambonusvergi);
 				}
 				else{
-					float zambonusvergi=(((salary*115)/100)*97)/100;
+					double zambonusvergi=((salary-salary*0.03)+ (salary*0.15));
 					System.out.println("Ýsim: "+isim);
-					System.out.println("Zamsýz maaþ: "+salary);
-					System.out.println("%15 Zamlý maaþ: "+ ((salary*115)/100) );
-					System.out.println("%15 Zam üzerine %3 vergi uygulanmýþ maaþ: "+zambonusvergi);
+					System.out.println("Zamsýz maaþ:"+salary);
+					System.out.println("Çalýþma saati: "+workHours);
+					System.out.println("Ýþe baþlangýç yýlý: "+hireYear);
+					System.out.println("Vergi: "+ salary*0.03);
+					System.out.println("Bonus:"+0.0);
+					System.out.println("Maaþ artýþý: "+ salary*0.15);
+					System.out.println("Vergi ve bonuslar ile birlikte maaþ: "+ (salary-salary*0.03));
+					System.out.println("Toplam maaþ: "+zambonusvergi);
 				}
 			}
 			if(salary<1000){
 				if (workHours>40){
-					float zambonusvergi=(salary*115)/100 + (workHours-40)*30*4;
+					double zambonusvergi=((salary + salary*0.15)+ (workHours-40)*30);
 					System.out.println("Ýsim: "+isim);
-					System.out.println("Zamsýz maaþ: "+salary);
-					System.out.println("%15 Zamlý maaþ: "+salary*115/100);
-					System.out.println("%15 Zamlý+bonuslu maaþ:"+ zambonusvergi);
+					System.out.println("Zamsýz maaþ:"+salary);
+					System.out.println("Çalýþma saati: "+workHours);
+					System.out.println("Ýþe baþlangýç yýlý: "+hireYear);
+					System.out.println("Vergi: "+ 0.0);
+					System.out.println("Bonus: "+ ((workHours-40)*30));
+					System.out.println("Maaþ artýþý: "+ salary*0.15);
+					System.out.println("Vergi ve bonuslar ile birlikte maaþ: "+ (salary+((workHours-40)*30)));
+					System.out.println("Toplam maaþ: "+zambonusvergi);
 				}
 				else{
-					float zambonusvergi=(salary*115)/100;
+					double zambonusvergi=((salary + salary*0.15));
 					System.out.println("Ýsim: "+isim);
-					System.out.println("Zamsýz maaþ:" +salary);
-					System.out.println("%15 Zamlý maaþ:" +zambonusvergi);
+					System.out.println("Zamsýz maaþ:"+salary);
+					System.out.println("Çalýþma saati: "+workHours);
+					System.out.println("Ýþe baþlangýç yýlý: "+hireYear);
+					System.out.println("Vergi: "+ 0.0);
+					System.out.println("Bonus: "+ 0.0);
+					System.out.println("Maaþ artýþý: "+ salary*0.15);
+					System.out.println("Vergi ve bonuslar ile birlikte maaþ: "+ salary);
+					System.out.println("Toplam maaþ: "+zambonusvergi);
 				}
 			}
 			
