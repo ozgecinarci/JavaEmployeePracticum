@@ -12,14 +12,6 @@ public class Employee {
 		this.hireYear=hireYear;
 	}
 	
-	public void showInformations(){
-		System.out.println("Bilgiler...");
-		System.out.println("Ýsim: "+this.name);
-		System.out.println("Çalýþma Saati: "+this.workHours);
-		System.out.println("Ýþe baþladýðý yýl: "+this.hireYear);
-	
-	}
-	
 	public void tax(){
 		if(salary>1000){
 			double tax= 0.03;
@@ -37,6 +29,8 @@ public class Employee {
 			System.out.println("Aylýk Bonus: "+ bonus);
 		}
 	}
+	
+
 	public void raiseSalary(){
 		
 		
@@ -57,6 +51,7 @@ public class Employee {
 			if(salary>1000){
 				if(workHours>40){
 				double zambonusvergi=((((salary*105)/100)+((workHours-40)*30*4))*97)/100;
+				System.out.println("Ýsim: "+isim);
 				System.out.println("Zamsýz maaþ:"+salary);
 				System.out.println("%5 Zamlý maaþ:"+ salary*105/100 );
 				System.out.println("%5 Zamlý+Bonuslu maaþ: "+(((salary*105)/100)+((workHours-40)*30*4)));
@@ -64,6 +59,7 @@ public class Employee {
 				}
 				else{
 					float zambonusvergi=(((salary*105)/100)*97)/100;
+					System.out.println("Ýsim: "+isim);
 					System.out.println("Zamsýz maaþ: "+salary);
 					System.out.println("%5 Zamlý maaþ: "+ ((salary*105)/100) );
 					System.out.println("%5 Zam üzerine %3 vergi uygulanmýþ maaþ: "+zambonusvergi);
@@ -71,7 +67,9 @@ public class Employee {
 			}
 			if(salary<1000){
 				if (workHours>40){
+					
 					float zambonusvergi=(salary*105)/100 + (workHours-40)*30*4;
+					System.out.println("Ýsim: "+isim);
 					System.out.println("Zamsýz maaþ: "+salary);
 					System.out.println("%5 Zamlý maaþ: "+salary*105/100);
 					System.out.println("%5 Zamlý+bonuslu maaþ"+ zambonusvergi);
@@ -79,6 +77,7 @@ public class Employee {
 				}
 				else{
 					float zambonusvergi=(salary*105)/100;
+					System.out.println("Ýsim: "+isim);
 					System.out.println("Zamsýz maaþ:" +salary);
 					System.out.println("%5 Zamlý maaþ:" +zambonusvergi);
 				}
@@ -92,6 +91,7 @@ public class Employee {
 			if(salary>1000){
 				if(workHours>40){
 				float zambonusvergi=(((salary*110)/100)+((workHours-40)*30*4)) *97/100 ;
+				System.out.println("Ýsim: "+isim);
 				System.out.println("Zamsýz maaþ:"+salary);
 				System.out.println("%10 Zamlý maaþ:"+ salary*105/100 );
 				System.out.println("%10 Zamlý+Bonuslu maaþ: "+(salary*110/100)+ ((workHours-40)*30*4)) ;
@@ -100,6 +100,7 @@ public class Employee {
 				}
 				else{
 					float zambonusvergi=(((salary*110)/100)*97)/100;
+					System.out.println("Ýsim: "+isim);
 					System.out.println("Zamsýz maaþ: "+salary);
 					System.out.println("%10 Zamlý maaþ: "+ ((salary*110)/100) );
 					System.out.println("%10 Zam üzerine %3 vergi uygulanmýþ maaþ: "+zambonusvergi);
@@ -108,6 +109,7 @@ public class Employee {
 			if(salary<1000){
 				if (workHours>40){ 
 					float zambonusvergi=(salary*110)/100 + (workHours-40)*30*4;
+					System.out.println("Ýsim: "+isim);
 					System.out.println("Zamsýz maaþ: "+salary);
 					System.out.println("%10 Zamlý maaþ: "+salary*110/100);
 					System.out.println("%10 Zamlý+bonuslu maaþ"+ zambonusvergi);
@@ -115,6 +117,7 @@ public class Employee {
 				}
 				else{
 					float zambonusvergi=(salary*110)/100;
+					System.out.println("Ýsim: "+isim);
 					System.out.println("Zamsýz maaþ:" +salary);
 					System.out.println("%10 Zamlý maaþ:" +zambonusvergi);
 				}
@@ -126,6 +129,7 @@ public class Employee {
 			if(salary>1000){
 				if(workHours>40){
 					float zambonusvergi=(((salary*115)/100)+((workHours-40)*30*4)) *97/100 ;
+					System.out.println("Ýsim: "+isim);
 					System.out.println("Zamsýz maaþ:"+salary);
 					System.out.println("%15 Zamlý maaþ:"+ salary*115/100 );
 					System.out.println("%15 Zamlý+Bonuslu maaþ: "+(salary*115/100)+ ((workHours-40)*30*4)) ;
@@ -133,6 +137,7 @@ public class Employee {
 				}
 				else{
 					float zambonusvergi=(((salary*115)/100)*97)/100;
+					System.out.println("Ýsim: "+isim);
 					System.out.println("Zamsýz maaþ: "+salary);
 					System.out.println("%15 Zamlý maaþ: "+ ((salary*115)/100) );
 					System.out.println("%15 Zam üzerine %3 vergi uygulanmýþ maaþ: "+zambonusvergi);
@@ -141,12 +146,14 @@ public class Employee {
 			if(salary<1000){
 				if (workHours>40){
 					float zambonusvergi=(salary*115)/100 + (workHours-40)*30*4;
+					System.out.println("Ýsim: "+isim);
 					System.out.println("Zamsýz maaþ: "+salary);
 					System.out.println("%15 Zamlý maaþ: "+salary*115/100);
-					System.out.println("%15 Zamlý+bonuslu maaþ"+ zambonusvergi);
+					System.out.println("%15 Zamlý+bonuslu maaþ:"+ zambonusvergi);
 				}
 				else{
 					float zambonusvergi=(salary*115)/100;
+					System.out.println("Ýsim: "+isim);
 					System.out.println("Zamsýz maaþ:" +salary);
 					System.out.println("%15 Zamlý maaþ:" +zambonusvergi);
 				}
@@ -154,6 +161,5 @@ public class Employee {
 			
 		}
 	}
-
 	
 }
